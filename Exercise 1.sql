@@ -41,7 +41,9 @@ FROM Products;
 -- find all Geek Squad employees who don't have a middle initial
 SELECT * FROM Employees WHERE Title = "Geek Squad" AND MiddleInitial IS NULL;
 
--- find all products from the products table whose stock level is in the range -- of 500 to 1200. Order by Price from least to greatest. Hint: Use the between keyword
+-- find all products from the products table whose stock level is in the range -- of 500 to 1200. 
+-- Order by Price from least to greatest. Hint: Use the between keyword
 SELECT *
 FROM Products
-WHERE StockLevel >=500 AND StockLevel <=1200;
+WHERE StockLevel BETWEEN 500 AND 1200
+ORDER BY Price;
